@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -63,7 +69,21 @@
   * {
     @apply border-border;
   }
+  .flex_center {
+    @apply flex items-center justify-center;
+  }
+  .flex_col_betweeen {
+    @apply flex flex-col items-center justify-between;
+  }
+  .flex_col_center {
+    @apply flex flex-col items-center justify-center;
+  }
   body {
     @apply bg-background text-foreground;
   }
+}
+.glassmorphism-auth {
+  background: rgba(6, 3, 3, 0.711);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
